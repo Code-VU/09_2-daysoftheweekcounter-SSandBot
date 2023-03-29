@@ -1,17 +1,17 @@
 def countDayOfTheWeek():
     # This first line is provided for yo
     # Initializes the dictionary
-    fname = input('Enter a file name: ')
-    counter = {}
+    file_name = input("Enter a file name: ")
+    day_counter = {}
     
-    with open(fname) as file: 
+    with open(file_name) as file: 
         for line in file: 
             if line.startswith("From "):
                 day = return_day(line)
 
-            counter[day] = counter.get(day,0) + 1
+                day_counter[day] = day_counter.get(day, 0) +1 
 
-    print(counter)
+    print(day_counter)
 
 
 
